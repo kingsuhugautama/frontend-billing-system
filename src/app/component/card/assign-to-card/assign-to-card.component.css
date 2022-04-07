@@ -1,0 +1,11 @@
+.cardBodyAssignTo {
+  background-color: #f6f6f6;
+  height: calc(100vh - 27.2rem);
+  overflow-y: auto;
+}
+
+.listAssignment {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px #f6f6f6 solid;
+}

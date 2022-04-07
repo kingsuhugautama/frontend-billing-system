@@ -1,0 +1,23 @@
+<div class="row align-items-center">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start px-0">
+        <div class="tabs-header">
+            <div *ngFor="let item of TabItem$ | async" class="tab-label"
+                (click)="onSelectTab(item, item.TabLabelComp.Id)" [class.active]="ActiveTab === item">
+
+                <!-- Tab Label Comp -->
+                <ng-container *ngIf="item.TabLabelComp">
+                    <ng-container *ngTemplateOutlet="item.TabLabelComp.labelContent"></ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="ActionButton.length" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-end">
+        <app-action-button [ActionButton]="CurrentActionButton" (onClickButton)="handleClickActionButton($event)">
+        </app-action-button>
+    </div>
+</div>
+<div class="tabs-body mt-3" style="height: calc(100vh - 11rem); overflow-y: auto;">
+    <ng-container *ngIf="ActiveTab && ActiveTab.TabBodyComp">
+        <ng-container *ngTemplateOutlet="ActiveTab.TabBodyComp.BodyContent"></ng-container>
+    </ng-container>
+</div>

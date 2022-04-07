@@ -1,0 +1,33 @@
+section#base_layout {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.sidebar {
+  z-index: 2;
+  transition: all 0.25s;
+  background-color: #f6f4f7;
+  overflow-y: auto;
+}
+
+.sidebarImage {
+  box-shadow: 2px 0 1px -2px #888 !important;
+}
+
+li.sidebarItem {
+  background-color: transparent;
+  cursor: pointer !important;
+}
+
+li.sidebarItem.isActive {
+  background-color: var(--biru-muda) !important;
+  color: white !important;
+  transition: all 0.25s;
+}
+
+img.img-logout {
+  height: 1.5em;
+  max-height: 1.5em;
+  width: 1.5em;
+  max-width: 1.5em;
+}

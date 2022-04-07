@@ -1,0 +1,68 @@
+<div class="row h-100">
+    <div *ngFor="let item of TicketCard" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3 px-0"
+        (click)="handleClickTicketCard(item)">
+        <div class="card shadow-sm" style="border-radius: 10px; border: 2px #f3f3f3 solid;">
+            <div class="card-body px-2">
+                <!-- Title and Time -->
+                <div class="row mb-2">
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mb-2">
+                        <h5 class="text-hitam fw-bold mb-0">
+                            {{ item.title }}
+                        </h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mb-2 text-end">
+                        <p class="text-hitam fw-bold mb-0">
+                            {{ item.created_date | date: 'dd MMMM yyyy' }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="row mb-2">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <p class="text-abu-tua mb-0">
+                            {{ item.description }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Priority and Chat -->
+                <div class="row align-items-center mb-0 cursor-pointer">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pe-0">
+                        <!-- Priority -->
+                        <span *ngIf="item.priority == 'low' && ShowPriority" class="badge bg-primary">
+                            LOW
+                        </span>
+                        <span *ngIf="item.priority == 'medium' && ShowPriority" class="badge bg-success">
+                            MEDIUM
+                        </span>
+                        <span *ngIf="item.priority == 'urgent' && ShowPriority" class="badge bg-danger">
+                            URGENT
+                        </span>
+
+                        <!-- Status -->
+                        <span *ngIf="item.status == 'open' && !ShowPriority" class="badge bg-primary">
+                            OPEN
+                        </span>
+                        <span *ngIf="item.status == 'on_progress' && !ShowPriority" class="badge bg-warning">
+                            ON PROGRESS
+                        </span>
+                        <span *ngIf="item.status == 'close' && !ShowPriority" class="badge bg-success">
+                            CLOSE
+                        </span>
+
+                        <!-- Kode TIket -->
+                        <span class="badge bg-secondary mx-2">
+                            {{ item.kode_tiket }}
+                        </span>
+
+                        <!-- Chat Count -->
+                        <span class="text-abu-tua mb-0">
+                            <i class="far fa-comment-alt fa-xs"></i>&nbsp; 2
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

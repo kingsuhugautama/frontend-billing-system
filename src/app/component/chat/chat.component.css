@@ -1,0 +1,9 @@
+.showHeaderClass {
+  height: calc(100vh - 22rem) !important;
+  overflow-y: auto;
+}
+
+.hideHeaderClass {
+  height: calc(100vh - 20rem) !important;
+  overflow-y: auto;
+}

@@ -1,0 +1,63 @@
+<section id="base_layout">
+    <div class="row h-100 px-0 align-items-center">
+        <!-- Sidebar -->
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 px-0">
+            <div class="card border-0 shadow-sm sidebar border-right" style="border-radius: 0;">
+                <div class="card-body px-0 pt-0" style="height: 100vh;">
+                    <div class="row">
+                        <!-- Logo -->
+                        <div
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 px-0 py-3 background-biru-muda text-center mb-5 sidebarImage">
+                            <img src="../../../../assets/image/authentication/image-logo.png" alt=""
+                                style="height: 1.6rem;">
+                        </div>
+
+                        <!-- Sidebar Menu -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            style="height: calc(100vh - 12rem); overflow-y: auto;">
+                            <ul class="list-group">
+                                <li *ngFor="let item of SidebarMenu" [id]="item.id + 'sidebarItem'"
+                                    class="list-group-item border-0 shadow-sm rounded mb-3 sidebarItem"
+                                    (click)="onClickSidebarItem(item)">
+                                    <i class="{{ item.icon }}"></i>&nbsp; {{ item.caption }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Profile -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 py-3 border-top">
+                            <div class="row align-items-center">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 px-0 text-center">
+                                    <img src="../../../../assets/image/navbar/user.png" alt="" class="img-logout">
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                    <p class="mb-0 text-biru-tua">
+                                        {{ UserData.full_name }}
+                                    </p>
+                                    <p class="mb-0" style="font-size: 13px;">
+                                        {{ UserData.nama_role }}
+                                    </p>
+                                </div>
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 px-0 text-center">
+                                    <p class="mb-0" style="font-size: 13px;">
+                                        <i class="fas fa-chevron-down fa-sm"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 px-3">
+            <div class="card border-0 shadow-sm" style="border-radius: 10px;">
+                <div class="card-body"
+                    style="height: calc(100vh - 2rem); border-radius: 10px; border-top: 5px solid var(--biru-muda)">
+                    <ng-content></ng-content>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

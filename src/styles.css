@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@syncfusion/ej2-base/styles/tailwind.css";
+@import "~@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "~@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "~@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "~@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "~@syncfusion/ej2-popups/styles/tailwind.css";
+@import "~@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "~@syncfusion/ej2-angular-grids/styles/tailwind.css";
+@import "~@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "~@syncfusion/ej2-angular-calendars/styles/tailwind.css";
+@import "~@syncfusion/ej2-angular-dropdowns/styles/tailwind.css";
+@import "~@syncfusion/ej2-lists/styles/tailwind.css";
+@import "~@syncfusion/ej2-angular-inputs/styles/tailwind.css";
+@import "~@syncfusion/ej2-angular-navigations/styles/tailwind.css";
+
+html,
+body {
+  font-family: "Cabin", sans-serif !important;
+  background-color: #f6f4f7 !important;
+}
+
+:root {
+  --biru-muda: #00afff;
+  --biru-tua: #0d6efd;
+  --hitam: #051e34;
+  --hitam-muda: #637280;
+  --abu-muda: #cbd1d6;
+  --abu-tua: #9f9f9f;
+  --putih-tua: #f9f9fa;
+  --hijau-muda: #00ff7a;
+  --hijau-tua: #009f4c;
+  --kuning-tua: #9f9b00;
+  --merah-muda: #ff5000;
+}
+
+/* ======= Style Biru Muda */
+.text-biru-muda {
+  color: var(--biru-muda) !important;
+}
+
+.background-biru-muda {
+  background-color: var(--biru-muda) !important;
+}
+
+.border-top-biru-muda {
+  border-top: 0.25em solid var(--biru-muda) !important;
+}
+
+.border-left-biru-muda {
+  border-left: 0.25em solid var(--biru-muda) !important;
+}
+
+/* ======= Style Biru Tua */
+.text-biru-tua {
+  color: var(--biru-tua) !important;
+}
+
+.background-biru-tua {
+  background-color: var(--biru-tua) !important;
+}
+
+.border-top-biru-tua {
+  border-top: 0.25em solid var(--biru-tua) !important;
+}
+
+.border-left-biru-tua {
+  border-left: 0.25em solid var(--biru-tua) !important;
+}
+
+/* ====== Style Hitam */
+.text-hitam {
+  color: var(--hitam) !important;
+}
+
+.text-hitam-muda {
+  color: var(--hitam-muda) !important;
+}
+
+/* ====== Style Abu Muda */
+.text-abu-muda {
+  color: var(--abu-muda) !important;
+}
+
+.background-abu-muda {
+  background-color: var(--abu-muda) !important;
+}
+
+.border-top-abu-muda {
+  border-top: 0.25em solid var(--biru-muda) !important;
+}
+
+/* ====== Style Abu Muda */
+.text-abu-tua {
+  color: var(--abu-tua) !important;
+}
+
+.background-abu-tua {
+  background-color: var(--abu-tua) !important;
+}
+
+.border-top-abu-tua {
+  border-top: 0.25em solid var(--abu-tua) !important;
+}
+
+.row {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}

@@ -1,0 +1,11 @@
+<div class="card shadow-sm border-0 background-biru-muda cardBodySender mb-1">
+    <div class="card-body p-2">
+        <p class="text-white mb-0">
+            {{ ChatContent.content }}
+        </p>
+    </div>
+</div>
+<p class="text-black mb-0 px-2 text-start" style="font-size: 14px">
+    {{ ChatContent.name }} &nbsp;<i class="fas fa-circle fa-xs" style="font-size: 7px; padding-bottom: 3px;"></i>&nbsp;
+    {{ ChatContent.time | date: 'dd/MM/yyyy HH:mm' }}
+</p>
